@@ -20,6 +20,10 @@ find_library(
         log
 )
 
+find_package(bytehook REQUIRED CONFIG)
+
+target_link_libraries(ndk-demo bytehook::bytehook)
+
 
 
 target_link_libraries(
